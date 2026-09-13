@@ -1,6 +1,6 @@
 cask "opossum-desktop" do
-  version "0.1.0"
-  sha256 "f8dad91956033e50aae7c49f9b83cb297320d57e9c3e08cf9d54805041d654ac"
+  version "0.2.0"
+  sha256 "391f534eed7f784612fd95a22dbca55b5ed24c9123a023d454a42e8619e12188"
 
   url "https://github.com/warrenseine/opossum-desktop/releases/download/v#{version}/OpossumDesktop-#{version}.zip"
   name "Opossum Desktop"
