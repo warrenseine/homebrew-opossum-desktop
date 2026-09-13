@@ -4,12 +4,12 @@ cask "opossum-desktop" do
 
   url "https://github.com/warrenseine/opossum-desktop/releases/download/v#{version}/OpossumDesktop-#{version}.zip"
   name "Opossum Desktop"
-  desc "Native macOS GUI for opossum, the Docker-Desktop-like orchestrator for Apple's container runtime"
+  desc "GUI for opossum, the Docker-Desktop-like orchestrator for the container runtime"
   homepage "https://github.com/warrenseine/opossum-desktop"
 
-  depends_on macos: ">= :tahoe"
-  depends_on formula: "container"
   depends_on cask: "suruseas/opossum/opossum"
+  depends_on formula: "container"
+  depends_on macos: :tahoe
 
   app "Opossum Desktop.app"
 
@@ -19,7 +19,7 @@ cask "opossum-desktop" do
     "~/Library/Saved Application State/ai.opossum-desktop.app.savedState",
   ]
 
-  caveat <<~EOS
+  caveats <<~EOS
     Opossum Desktop is unsigned (no Apple Developer ID yet). On first launch, Gatekeeper will
     refuse to open it — right-click the app in Finder and choose "Open" once to approve it,
     or run:
